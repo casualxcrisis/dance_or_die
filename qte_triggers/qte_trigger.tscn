@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://dr6perhug6ik8"]
+
+[ext_resource type="Script" uid="uid://c532qwde7ejm2" path="res://qte_triggers/qte_trigger.gd" id="1_0rtvr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0yd1l"]
+size = Vector2(25, 23)
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=794472586]
+script = ExtResource("1_0rtvr")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=347223084]
+offset_left = -14.000001
+offset_top = -11.0
+offset_right = 26.0
+offset_bottom = 29.0
+scale = Vector2(0.64000076, 0.6400008)
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1208899463]
+position = Vector2(-1.5, 1.5)
+shape = SubResource("RectangleShape2D_0yd1l")
+
+[node name="Label" type="Label" parent="." unique_id=550343674]
+offset_left = -6.0
+offset_top = -11.0
+offset_right = 34.0
+offset_bottom = 12.0
+text = "S"
