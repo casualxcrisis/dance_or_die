@@ -2,11 +2,14 @@
 
 [ext_resource type="Script" uid="uid://cnxfjcd466xra" path="res://scenes/level_1.gd" id="1_5xbjy"]
 [ext_resource type="PackedScene" uid="uid://b86qi8a3wtecc" path="res://backgrounds/background.tscn" id="2_4nkto"]
-[ext_resource type="Script" uid="uid://bpxmibaqt7y1j" path="res://scenes/s_key_zone.gd" id="3_5xbjy"]
-[ext_resource type="PackedScene" uid="uid://dr6perhug6ik8" path="res://qte_triggers/qte_trigger.tscn" id="4_5xbjy"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_0yd1l"]
-size = Vector2(18.967392, 20.447754)
+[ext_resource type="PackedScene" uid="uid://dc20l7hfsytgp" path="res://areas/s_key_hit_zone.tscn" id="4_4nkto"]
+[ext_resource type="PackedScene" uid="uid://wf2l8xxib38s" path="res://areas/qte_destroyer.tscn" id="4_5xbjy"]
+[ext_resource type="PackedScene" uid="uid://bb2dt8c3bx3gi" path="res://areas/a_key_hit_zone.tscn" id="5_4nkto"]
+[ext_resource type="PackedScene" uid="uid://ch01cmiscon1a" path="res://areas/d_key_hit_zone.tscn" id="5_fcfvj"]
+[ext_resource type="PackedScene" uid="uid://qgewvsmqk8no" path="res://areas/f_key_hit_zone.tscn" id="6_2y5yt"]
+[ext_resource type="PackedScene" uid="uid://bvikpa1y776nd" path="res://areas/j_key_hit_zone.tscn" id="7_2os1m"]
+[ext_resource type="PackedScene" uid="uid://3sex4v2flnem" path="res://areas/k_key_hit_zone.tscn" id="8_go7sj"]
+[ext_resource type="PackedScene" uid="uid://car0j70jcgvs2" path="res://areas/l_key_hit_zone.tscn" id="9_7gny6"]
 
 [node name="level_1" type="Node2D" unique_id=492101443]
 script = ExtResource("1_5xbjy")
@@ -15,24 +18,38 @@ script = ExtResource("1_5xbjy")
 position = Vector2(578, 330)
 
 [node name="background" parent="." unique_id=409379890 instance=ExtResource("2_4nkto")]
+scale = Vector2(1, 1.04)
 
-[node name="s_key_zone" type="Area2D" parent="." unique_id=1068185348]
-position = Vector2(150, 618)
-scale = Vector2(3.68, 2.6800013)
-script = ExtResource("3_5xbjy")
+[node name="hit_zones" type="Node2D" parent="." unique_id=981539053]
 
-[node name="ColorRect" type="ColorRect" parent="s_key_zone" unique_id=1446063352]
-offset_left = -9.510869
-offset_top = -10.074621
-offset_right = 30.489132
-offset_bottom = 29.925379
-scale = Vector2(0.4739977, 0.5068075)
+[node name="a_key_hit_zone" parent="hit_zones" unique_id=1361417239 instance=ExtResource("5_4nkto")]
+position = Vector2(131, 616)
+scale = Vector2(2.88, 1)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="s_key_zone" unique_id=178729209]
-position = Vector2(-0.5162926, 0.22387695)
-scale = Vector2(1, 0.9999999)
-shape = SubResource("RectangleShape2D_0yd1l")
+[node name="s_zone" parent="hit_zones" unique_id=1625457050 instance=ExtResource("4_4nkto")]
+position = Vector2(271, 616)
+scale = Vector2(2.88, 1)
 
-[node name="CharacterBody2D" parent="." unique_id=794472586 instance=ExtResource("4_5xbjy")]
-position = Vector2(146, 338)
-qte_speed = 200
+[node name="d_key_hit_zone" parent="hit_zones" unique_id=426353730 instance=ExtResource("5_fcfvj")]
+position = Vector2(401, 617)
+scale = Vector2(3.32, 1)
+
+[node name="f_key_hit_zone" parent="hit_zones" unique_id=1901091065 instance=ExtResource("6_2y5yt")]
+position = Vector2(559, 618)
+scale = Vector2(3.455, 1)
+
+[node name="j_key_hit_zone" parent="hit_zones" unique_id=494416421 instance=ExtResource("7_2os1m")]
+position = Vector2(712, 619)
+scale = Vector2(3.84, 1)
+
+[node name="k_key_hit_zone" parent="hit_zones" unique_id=1733511271 instance=ExtResource("8_go7sj")]
+position = Vector2(856, 618)
+scale = Vector2(3.83, 1)
+
+[node name="l_key_hit_zone" parent="hit_zones" unique_id=1777081616 instance=ExtResource("9_7gny6")]
+position = Vector2(1004, 616)
+scale = Vector2(3.995, 1)
+
+[node name="qte_destroyer" parent="hit_zones" unique_id=602187533 instance=ExtResource("4_5xbjy")]
+position = Vector2(578, 641)
+scale = Vector2(57.52, 1)

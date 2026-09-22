@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://wf2l8xxib38s"]
+
+[ext_resource type="Script" uid="uid://hbi8aunll1fl" path="res://areas/mulcher.gd" id="1_qkwom"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0yd1l"]
+
+[node name="qte_destroyer" type="Node2D" unique_id=602187533]
+
+[node name="mulcher" type="Area2D" parent="." unique_id=510434006]
+script = ExtResource("1_qkwom")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="mulcher" unique_id=1349291092]
+shape = SubResource("RectangleShape2D_0yd1l")
+
+[connection signal="body_entered" from="mulcher" to="mulcher" method="_on_body_entered"]

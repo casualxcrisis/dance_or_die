@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://dpv7xhcuav1ay"]
+
+[ext_resource type="Script" uid="uid://ku1a5wytrnex" path="res://qte_triggers/a_qte_trigger.gd" id="1_mcmpb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0yd1l"]
+
+[node name="a_qte_trigger" type="CharacterBody2D" unique_id=1777077116]
+scale = Vector2(1.3200004, 1.3200004)
+script = ExtResource("1_mcmpb")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=343106449]
+offset_left = -10.0
+offset_top = -10.0
+offset_right = 30.0
+offset_bottom = 30.0
+scale = Vector2(0.5, 0.5)
+color = Color(0, 0, 0, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1548748261]
+shape = SubResource("RectangleShape2D_0yd1l")
+
+[node name="Label" type="Label" parent="." unique_id=183717334]
+offset_left = -6.0
+offset_top = -12.0
+offset_right = 34.0
+offset_bottom = 11.0
+text = "A"

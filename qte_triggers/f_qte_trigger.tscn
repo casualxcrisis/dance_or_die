@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://monmlargtv3w"]
+
+[ext_resource type="Script" uid="uid://d2mycyewhmrrl" path="res://qte_triggers/f_qte_trigger.gd" id="1_omu3b"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0yd1l"]
+
+[node name="f_qte_trigger" type="CharacterBody2D" unique_id=62768421]
+script = ExtResource("1_omu3b")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=176791399]
+offset_left = -10.0
+offset_top = -10.0
+offset_right = 30.0
+offset_bottom = 30.0
+scale = Vector2(0.5, 0.5)
+color = Color(0, 0, 0, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=75163094]
+shape = SubResource("RectangleShape2D_0yd1l")
+
+[node name="Label" type="Label" parent="." unique_id=404742314]
+offset_left = -5.0
+offset_top = -12.0
+offset_right = 35.0
+offset_bottom = 11.0
+text = "F"
